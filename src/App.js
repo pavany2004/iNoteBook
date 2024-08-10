@@ -1,31 +1,3 @@
-// import "./App.css";
-// import React from "react";
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   BrowserRouter
-// } from "react-router-dom";
-// import Navbar from "./components/Navbar";
-// import Home from "./components/Home";
-// import About from "./components/About";
-// function App() {
-//   return (
-//     <>
-//     <BrowserRouter>
-//         <Navbar />
-//         <Routes>
-//           <Route  path="/" element={<Home />}/>
-//           <Route  path="/about" element={ <About />}/>
-//         </Routes>
-//       </BrowserRouter>
-//     </>
-//   );
-// }
-
-// export default App;
-
-
 import About from "./components/About";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
@@ -35,8 +7,6 @@ import Alert from "./components/Alert";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import { useState } from "react";
-import axios from 'axios';
-
 function App() {
   const [alert,setAlert]=useState(null);
   const showAlert = (message,type)=>{
@@ -47,7 +17,6 @@ function App() {
     setTimeout(()=>{
       setAlert(null);
     },1500)
-    axios.post('i-note-book-mern-project.vercel.app');
   }
   
   return (
