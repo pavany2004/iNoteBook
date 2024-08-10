@@ -35,6 +35,7 @@ import Alert from "./components/Alert";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import { useState } from "react";
+import axios from 'axios';
 
 function App() {
   const [alert,setAlert]=useState(null);
@@ -46,7 +47,9 @@ function App() {
     setTimeout(()=>{
       setAlert(null);
     },1500)
+    axios.post('i-note-book-mern-project.vercel.app');
   }
+  
   return (
     <>
     <NoteState>
